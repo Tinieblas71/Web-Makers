@@ -8,7 +8,7 @@ const circleVariants = {
         transition: {
             duration: 2, 
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeOut",
         }
     },
 
@@ -19,7 +19,7 @@ const circleVariants = {
         transition: {
             duration: 2, 
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeOut",
         }
     },
 
@@ -30,10 +30,14 @@ const circleVariants = {
         transition: {
             duration: 3, 
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeOut",
         }
     },
+ }
 
+ {
+    /*
+    
     animate4: {
         scale: [1, 1.4, 1],
         x: [0, 160, 0],
@@ -66,6 +70,7 @@ const circleVariants = {
             ease: "easeInOut",
         }
     },
+    */
  }
 
 import React from 'react'
@@ -74,7 +79,7 @@ function BlurBackground() {
   return (
     <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[100px] opacity-70'> 
         <motion.div 
-            className='bg-yellow-500 w-[350px] h-[250px] rounded-full absolute'
+            className='bg-pink-500 w-[350px] h-[250px] rounded-full absolute'
             variants={circleVariants}
             animate='animate1'> 
         </motion.div>
@@ -84,11 +89,13 @@ function BlurBackground() {
             animate='animate2'> 
         </motion.div>
         <motion.div 
-            className='bg-emerald-500 w-[360px] h-[260px] rounded-full absolute'
+            className='bg-blue-500 w-[360px] h-[260px] rounded-full absolute'
             variants={circleVariants}
             animate='animate3'> 
         </motion.div>
-        <motion.div 
+{
+    /*
+            <motion.div 
             className='bg-blue-500 w-[360px] h-[260px] rounded-full absolute'
             variants={circleVariants}
             animate='animate4'> 
@@ -103,6 +110,8 @@ function BlurBackground() {
             variants={circleVariants}
             animate='animate6'> 
         </motion.div>
+    */
+}
     </div>
   )
 }
