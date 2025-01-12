@@ -8,7 +8,7 @@ const circleVariants = {
         transition: {
             duration: 2, 
             repeat: Infinity,
-            ease: "easeOut",
+            ease: 'easeOut',
         }
     },
 
@@ -21,81 +21,63 @@ const circleVariants = {
             repeat: Infinity,
             ease: "easeOut",
         }
-    },
-
-    animate3: {
-        scale: [1, 1.3, 1],
-        x: [0, 140, 0],
-        y: [0, 70, 0],
-        transition: {
-            duration: 3, 
-            repeat: Infinity,
-            ease: "easeOut",
-        }
-    },
+    }
  }
 
  {
     /*
     
-    animate4: {
-        scale: [1, 1.4, 1],
-        x: [0, 160, 0],
-        y: [0, -80, 0],
-        transition: {
-            duration: 4, 
-            repeat: Infinity,
-            ease: "easeInOut",
-        }
-    },
+        animate3: {
+            scale: [1, 1.3, 1],
+            x: [0, 140, 0],
+            y: [0, 70, 0],
+            transition: {
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeOut",
+            }
+        },
 
-    animate5: {
-        scale: [1, 1.5, 1],
-        x: [0, 180, 0],
-        y: [0, 90, 0],
-        transition: {
-            duration: 3, 
-            repeat: Infinity,
-            ease: "easeInOut",
-        }
-    },
+        animate4: {
+            scale: [1, 1.4, 1],
+            x: [0, 160, 0],
+            y: [0, -80, 0],
+            transition: {
+                duration: 4, 
+                repeat: Infinity,
+                ease: "easeInOut",
+            }
+        },
 
-    animate6: {
-        scale: [1, 1.6, 1],
-        x: [0, 200, 0],
-        y: [0, -100, 0],
-        transition: {
-            duration: 3, 
-            repeat: Infinity,
-            ease: "easeInOut",
-        }
-    },
-    */
- }
+        animate5: {
+            scale: [1, 1.5, 1],
+            x: [0, 180, 0],
+            y: [0, 90, 0],
+            transition: {
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut",
+            }
+        },
 
-import React from 'react'
+        animate6: {
+            scale: [1, 1.6, 1],
+            x: [0, 200, 0],
+            y: [0, -100, 0],
+            transition: {
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut",
+            }
+        },
 
-function BlurBackground() {
-  return (
-    <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[100px] opacity-70'> 
-        <motion.div 
-            className='bg-pink-500 w-[350px] h-[250px] rounded-full absolute'
-            variants={circleVariants}
-            animate='animate1'> 
-        </motion.div>
-        <motion.div 
-            className='bg-orange-500 w-[360px] h-[260px] rounded-full absolute'
-            variants={circleVariants}
-            animate='animate2'> 
-        </motion.div>
-        <motion.div 
-            className='bg-blue-500 w-[360px] h-[260px] rounded-full absolute'
-            variants={circleVariants}
-            animate='animate3'> 
-        </motion.div>
-{
-    /*
             <motion.div 
+                className='bg-orange-500 w-[360px] h-[260px] rounded-full absolute'
+                variants={circleVariants}
+                animate='animate2'> 
+            </motion.div>
+
+                        <motion.div 
             className='bg-blue-500 w-[360px] h-[260px] rounded-full absolute'
             variants={circleVariants}
             animate='animate4'> 
@@ -111,7 +93,25 @@ function BlurBackground() {
             animate='animate6'> 
         </motion.div>
     */
-}
+
+ }
+
+import React from 'react'
+
+function BlurBackground() {
+  return (
+    <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[100px] opacity-70'> 
+        <motion.div 
+            className='bg-pink-500 w-[450px] h-[350px] rounded-full absolute'
+            variants={circleVariants}
+            animate='animate1'> 
+        </motion.div>
+
+        <motion.div 
+            className='bg-blue-500 w-[460px] h-[360px] rounded-full absolute'
+            variants={circleVariants}
+            animate='animate2'> 
+        </motion.div>
     </div>
   )
 }

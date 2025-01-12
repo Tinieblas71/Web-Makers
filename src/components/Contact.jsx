@@ -61,20 +61,20 @@ function Contact() {
                     {CONTACT_CONTENT.personal}
             </motion.p>
             <motion.a
-                href={`mailto:${CONTACT_CONTENT.email}`}
+                href={`https://api.whatsapp.com/send?phone=5215612807356&text=Hola!%20Estoy%20interesado%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20podemos%20poner%20en%20marcha%20mi%20propio%20sitio%20web!`}
                 className='text-2xl md:text-3xl font-medium mt-8 w-fit p-6 bg-stone-600/10 rounded-lg backdrop-blur-3xl bg-gradient-to-r from-green-900 to-stone-600/10 hover:outline outline-offset-2 outline-green-500'
                 initial='hidden'
                 whileInView='visible'
                 custom={0.8}
                 variants={textVariants}>
                      <div className='flex gap-2'>
-                     <box-icon name='envelope' color='white' size='md'></box-icon>
-                        <p>Correo electrónico</p>
+                     <box-icon type='logo' name='whatsapp' size='md' color='white'></box-icon>
+                        <p>WhatsApp</p>
                     </div>
             </motion.a>
             <motion.a
                 href={`${CONTACT_CONTENT.sitio_web}`}
-                className='text-2xl md:text-3xl font-medium mt-8 w-fit p-6 bg-stone-600/10 rounded-lg backdrop-blur-3xl bg-gradient-to-r from-indigo-900 to-stone-600/10 hover:outline outline-offset-2 outline-indigo-500'
+                className='text-2xl md:text-3xl font-medium mt-8 w-fit p-6 bg-stone-600/10 rounded-lg backdrop-blur-3xl bg-gradient-to-r from-rose-900 to-stone-600/10 hover:outline outline-offset-2 outline-rose-500'
                 initial='hidden'
                 whileInView='visible'
                 target='_blank'
@@ -89,12 +89,6 @@ function Contact() {
         </div>
         <div className='flex space-x-6 mt-8'>
             {CONTACT_CONTENT.socialLinks.map((link, index) => {
-                const Icon = 
-                   link.icon === "RiInstagramLine"
-                 ? RiInstagramLine
-                 : link.icon === "RiGithubFill"
-                 ? RiGithubFill
-                 : RiLinkedinBoxFill
                  return (
                     <motion.a
                         key={link.platform}
@@ -106,7 +100,7 @@ function Contact() {
                         whileInView='visible'
                         custom={1.0 + index * 0.2}
                         variants={iconVarianst}>
-                            <Icon size={46}/>
+                            <box-icon type='logo' name={link.icon} size='md' color='white'></box-icon>
                     </motion.a>
                  )
             })}

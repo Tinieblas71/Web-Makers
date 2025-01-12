@@ -42,6 +42,7 @@ function Experience() {
                 {EXPERIENCES.map((experience, index) => (
                     <motion.div
                         key={index}
+                        initial={false}
                         variants={childVariants}>
                             <div className='flex flex-col md:flex-row md:justify-between'>
                                 <div className='text-sm md:w1/4 mb-2 md:mb-0 p-4'>

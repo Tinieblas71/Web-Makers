@@ -3,7 +3,7 @@ import React from 'react'
 import { PROJECTS } from '../constants'
 
 const projectVariants = {
-    hidden: { opacity: 0, scale: 0.9, rotate: 30, y:10 },
+    hidden: { opacity: 0, scale: 0.9, rotate: 10, y:10 },
     visible: {
         opacity: 1,
         scale: 1,
