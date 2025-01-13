@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import React from 'react'
 
 const circleVariants = {
     animate1: {
@@ -8,7 +9,7 @@ const circleVariants = {
         transition: {
             duration: 2, 
             repeat: Infinity,
-            ease: 'easeOut',
+            ease: 'easeInOut',
         }
     },
 
@@ -19,7 +20,7 @@ const circleVariants = {
         transition: {
             duration: 2, 
             repeat: Infinity,
-            ease: "easeOut",
+            ease: "easeInOut",
         }
     }
  }
@@ -96,19 +97,17 @@ const circleVariants = {
 
  }
 
-import React from 'react'
-
 function BlurBackground() {
   return (
     <div className='fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none flex justify-center items-center filter blur-[100px] opacity-70'> 
         <motion.div 
-            className='bg-pink-500 w-[450px] h-[350px] rounded-full absolute'
+            className='bg-gradient-to-r from-teal-500 to-blue-500 w-[450px] h-[350px] rounded-full absolute'
             variants={circleVariants}
             animate='animate1'> 
         </motion.div>
 
         <motion.div 
-            className='bg-blue-500 w-[460px] h-[360px] rounded-full absolute'
+            className='bg-gradient-to-r from-pink-500 to-purple-500 w-[460px] h-[360px] rounded-full absolute'
             variants={circleVariants}
             animate='animate2'> 
         </motion.div>
