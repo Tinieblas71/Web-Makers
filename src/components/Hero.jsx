@@ -64,8 +64,8 @@ function Hero() {
               <img
                 src={logo}
                 alt="img jason"
-                width={650}
-                height={650}
+                width={300}
+                height={300}
                 className="rounded-3xl"
               />
             </div>
@@ -109,8 +109,8 @@ function Hero() {
               <img
                 src={logo}
                 alt="img jason"
-                width={600}
-                height={600}
+                width={420}
+                height={420}
                 className="rounded-3xl"
               />
             </motion.div>
