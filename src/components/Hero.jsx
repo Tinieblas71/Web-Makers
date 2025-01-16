@@ -107,8 +107,8 @@ function Hero() {
               <img
                 src={logo}
                 alt="img jason"
-                width={650}
-                height={650}
+                width={600}
+                height={600}
                 className="rounded-3xl"
               />
             </motion.div>

@@ -2,11 +2,6 @@ import projects1 from "../assets/1.jpg";
 import projects2 from "../assets/2.jpg";
 import projects3 from "../assets/3.jpg";
 
-import person1 from "../assets/person1.webp";
-import person2 from "../assets/person2.webp";
-import person3 from "../assets/person3.webp";
-
-
 export const LINKS = [
   { href: "#about", label: "Acerca De" },
   { href: "#work", label: "Proyectos" },
