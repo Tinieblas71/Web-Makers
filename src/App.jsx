@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BlurBackground, Navbar, Hero, Projects, About, Experience, Testimonials, Contact } from './components/index' 
+import { BlurBackground, Navbar, Hero, Projects, About, Testimonials, Contact } from './components/index' 
 
 function App() {
   return (

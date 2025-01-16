@@ -47,31 +47,7 @@ function Hero() {
   return (
     <section>
       <div className="relative z-10 min-h-screen flex flex-wrap flex-col md:flex-row items-center justify-center text-white">
-        {device === "mobile" ? (
-          <>
-            <div className="w-full md:w-1/2 p-8">
-              <h1 className="text-2xl md:text-3xl lg:text-5xl my-14">
-                <b>{HERO_CONTENT.greeting}</b>
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-4xl mb-4">
-                {HERO_CONTENT.introduction}
-              </p>
-              <p className="text-xl md:text-2xl lg:text-4xl mb-4">
-                {HERO_CONTENT.description}
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 p-8">
-              <img
-                src={logo}
-                alt="img jason"
-                width={300}
-                height={300}
-                className="rounded-3xl"
-              />
-            </div>
-          </>
-        ) : (
-          <>
+          
             <motion.div
               className="w-full md:w-1/2 p-8"
               initial="hidden"
@@ -114,8 +90,7 @@ function Hero() {
                 className="rounded-3xl"
               />
             </motion.div>
-          </>
-        )}
+          
       </div>
     </section>
   );
