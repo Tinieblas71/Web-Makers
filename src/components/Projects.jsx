@@ -4,17 +4,18 @@ import { PROJECTS } from "../constants";
 import { useState, useEffect } from "react";
 
 const projectVariants = {
-  hidden: { opacity: 0, scale: 0.9, rotate: 10, y: 10 },
+  hidden: { 
+    opacity: 0, 
+    scale: 0.95 // Elimina propiedades menos perceptibles como 'rotate' y ajusta el 'scale' ligeramente
+  },
   visible: {
     opacity: 1,
     scale: 1,
-    rotate: 0,
-    y: 0,
     transition: {
-      duration: 0.6,
-      ease: "easeInOut",
+      duration: 0.5, // Reducción de duración para mejorar la fluidez
+      ease: "easeOut", // Cambia a 'easeOut' para una animación más rápida
       type: "spring",
-      bounce: 0.4,
+      bounce: 0.3, // Reduce el rebote para suavizar la animación
     },
   },
 };
@@ -84,6 +85,7 @@ function Projects() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={projectVariants}
+                style={{ willChange: 'transform' }}
               >
                 <img
                   src={project.image}

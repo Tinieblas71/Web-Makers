@@ -1,7 +1,7 @@
 import React from "react";
 import { LINKS } from "../constants";
 import { RiMenu3Fill, RiCloseFill } from "@remixicon/react";
-import logo from "../assets/web-maker-logo.png";
+import logo from "../assets/favicon.ico";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);

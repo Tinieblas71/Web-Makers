@@ -77,6 +77,7 @@ function Hero() {
               initial="hidden"
               animate="visible"
               variants={containerVariants}
+              style={{ willChange: 'transform' }}
             >
               <motion.h1
                 className="text-2xl md:text-3xl lg:text-5xl my-14"
@@ -103,6 +104,7 @@ function Hero() {
               initial="hidden"
               animate="visible"
               variants={imageVariants}
+              style={{ willChange: 'transform' }}
             >
               <img
                 src={logo}

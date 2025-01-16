@@ -10,10 +10,6 @@
     font-family: "Poppins", serif;
 }
 
-.bg-image {
-    background-image: url("./assets/jason-root.webp");
-}
-
 #work, #about, #experience, #contact, #testimonials {
     scroll-margin-top: 80px;
 }
@@ -36,5 +32,6 @@
 }
 
 ::selection {
-    color: rgb(124, 112, 255);
+    color: rgb(0, 0, 0);
+    background-color: rgba(112, 231, 255, 0.6);
 }

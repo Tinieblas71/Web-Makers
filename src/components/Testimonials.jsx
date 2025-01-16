@@ -1,7 +1,5 @@
 import React from "react";
-
 import { motion } from "framer-motion";
-import { section } from "framer-motion/client";
 import { TESTIMONIALS } from "../constants";
 import { useState, useEffect } from "react";
 
@@ -78,6 +76,7 @@ function Testimonials() {
                 initial="hidden"
                 whileInView="visible"
                 variants={childVariants}
+                style={{ willChange: 'transform' }}
               >
                 <div className="flex items-center mb-4">
                   <img

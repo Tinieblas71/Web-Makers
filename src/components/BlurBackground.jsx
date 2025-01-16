@@ -3,27 +3,25 @@ import React from 'react'
 
 const circleVariants = {
     animate1: {
-        scale: [1, 1.2, 1],
-        x: [0, 100, 10],
-        y: [0, 50, 0],
-        transition: {
-            duration: 2, 
-            repeat: Infinity,
-            ease: 'easeInOut',
-        }
+      scale: [1, 1.2, 1],
+      x: [0, 80, 0], // Reduce el desplazamiento en el eje x
+      transition: {
+        duration: 2, 
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }
     },
-
+  
     animate2: {
-        scale: [1, 1.1, 1],
-        x: [0, 120, 0],
-        y: [0, -60, 0],
-        transition: {
-            duration: 2, 
-            repeat: Infinity,
-            ease: "easeInOut",
-        }
+      scale: [1, 1.1, 1],
+      y: [0, -40, 0], // Reduce el desplazamiento en el eje y
+      transition: {
+        duration: 2, 
+        repeat: Infinity,
+        ease: "easeInOut",
+      }
     }
- }
+  };
 
  {
     /*
@@ -103,13 +101,15 @@ function BlurBackground() {
         <motion.div 
             className='bg-gradient-to-r from-teal-500 to-blue-500 w-[350px] h-[250px] rounded-full absolute'
             variants={circleVariants}
-            animate='animate1'> 
+            animate='animate1'
+            style={{ willChange: 'transform' }}> 
         </motion.div>
 
         <motion.div 
             className='bg-gradient-to-r from-pink-500 to-purple-500 w-[360px] h-[260px] rounded-full absolute'
             variants={circleVariants}
-            animate='animate2'> 
+            animate='animate2'
+            style={{ willChange: 'transform' }}> 
         </motion.div>
     </div>
   )
