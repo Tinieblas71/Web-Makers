@@ -16,13 +16,14 @@ const useDeviceType = () => {
 
 function Testimonials() {
   const childVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 20 }, // Reducimos el desplazamiento vertical
     visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        delay: i * 0.5,
+        duration: 0.5, // Reducción de la duración
+        delay: i * 0.3, // Reducimos el tiempo de retraso para evitar ralentizar la animación general
+        ease: "easeOut", // Suavidad sin sobrecargar
       },
     }),
   };

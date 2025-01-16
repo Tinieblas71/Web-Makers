@@ -6,7 +6,7 @@ import { HERO_CONTENT } from "../constants";
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  visible: { opacity: 1, y: 1, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const containerVariants = {
@@ -14,7 +14,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2, // Reducimos el tiempo entre hijos para acelerar el proceso
     },
   },
 };
@@ -24,8 +24,8 @@ const imageVariants = {
   visible: {
     clipPath: "inset(0 0% 0 0%)",
     transition: {
-      duration: 1.2,
-      ease: "easeInOut",
+      duration: 0.8, // Reducción de la duración para optimizar el rendimiento
+      ease: "easeOut", // Cambiar a 'easeOut' para una animación más rápida y eficiente
     },
   },
 };

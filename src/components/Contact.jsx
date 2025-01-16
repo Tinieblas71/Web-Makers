@@ -6,25 +6,25 @@ import { CONTACT_CONTENT } from "../constants";
 import "boxicons";
 
 const textVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 }, // Reducción del desplazamiento vertical
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.6, // Reducción de la duración
       ease: "easeOut",
       delay,
     },
   }),
 };
 
-const iconVarianst = {
-  hidden: { opacity: 0, scale: 0 },
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0.8 }, // Escala inicial más cercana al estado final
   visible: (delay = 0) => ({
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.4, // Reducción de la duración
       ease: "easeOut",
       delay,
     },
@@ -176,7 +176,7 @@ function Contact() {
               initial="hidden"
               whileInView="visible"
               custom={1.0 + index * 0.2}
-              variants={iconVarianst}
+              variants={iconVariants}
             >
               <box-icon
                 type="logo"
