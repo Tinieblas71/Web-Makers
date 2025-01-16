@@ -1,18 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TESTIMONIALS } from "../constants";
-import { useState, useEffect } from "react";
-
-const useDeviceType = () => {
-  const [device, setDevice] = useState("desktop");
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    setDevice(width < 768 ? "mobile" : "desktop");
-  }, []);
-
-  return device;
-};
 
 function Testimonials() {
   const childVariants = {
@@ -27,8 +15,6 @@ function Testimonials() {
       },
     }),
   };
-
-  const device = useDeviceType();
 
   return (
     <section className="px-6 py-10 h-4/5" id="testimonials">

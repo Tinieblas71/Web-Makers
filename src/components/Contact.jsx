@@ -1,9 +1,7 @@
 import React from "react";
-
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import { CONTACT_CONTENT } from "../constants";
-import "boxicons";
+import boxicons from "boxicons";
 
 const textVariants = {
   hidden: { opacity: 0, y: 10 }, // Reducción del desplazamiento vertical
@@ -31,19 +29,7 @@ const iconVariants = {
   }),
 };
 
-const useDeviceType = () => {
-  const [device, setDevice] = useState("desktop");
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    setDevice(width < 768 ? "mobile" : "desktop");
-  }, []);
-
-  return device;
-};
-
 function Contact() {
-  const device = useDeviceType();
 
   return (
     <section
@@ -64,41 +50,6 @@ function Contact() {
           {CONTACT_CONTENT.headline}
         </motion.h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        {device === "mobile" ? (
-          <>
-            <p className="text-lg md:text-2xl mt-6 max-w-3xl">
-              {CONTACT_CONTENT.description}
-            </p>
-            <p className="text-lg md:text-2xl mt-6 max-w-3xl">
-              {CONTACT_CONTENT.personal}
-            </p>
-            <a
-              href={`https://api.whatsapp.com/send?phone=5215612807356&text=Hola!%20Estoy%20interesado%20en%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20podemos%20poner%20en%20marcha%20mi%20propio%20sitio%20web!`}
-              className="text-2xl md:text-3xl font-medium mt-8 w-fit p-6 bg-stone-600/10 rounded-lg backdrop-blur-3xl bg-gradient-to-r from-green-900 to-stone-600/10 hover:outline outline-offset-2 outline-green-500"
-            >
-              <div className="flex gap-2">
-                <box-icon
-                  type="logo"
-                  name="whatsapp"
-                  size="md"
-                  color="white"
-                ></box-icon>
-                <p>WhatsApp</p>
-              </div>
-            </a>
-            <a
-              href={`${CONTACT_CONTENT.sitio_web}`}
-              className="text-2xl md:text-3xl font-medium mt-8 w-fit p-6 bg-stone-600/10 rounded-lg backdrop-blur-3xl bg-gradient-to-r from-rose-900 to-stone-600/10 hover:outline outline-offset-2 outline-rose-500"
-              target="_blank"
-            >
-              <div className="flex gap-2">
-                <box-icon name="link" color="white" size="md"></box-icon>
-                <p>Portafolio Personal</p>
-              </div>
-            </a>
-          </>
-        ) : (
-          <>
             <motion.p
               className="text-lg md:text-2xl mt-6 max-w-3xl"
               initial="hidden"
@@ -149,8 +100,6 @@ function Contact() {
                 <p>Portafolio Personal</p>
               </div>
             </motion.a>
-          </>
-        )}
       </div>
       <div className="flex space-x-6 mt-8">
         {CONTACT_CONTENT.socialLinks.map((link, index) => {

@@ -17,7 +17,7 @@ function Navbar() {
           <img src={logo} width={32} height={32} alt="web-maker's logo" />
           <a href="/" className="ml-5">
             {" "}
-            Web Maker's{" "}
+            Web Makers{" "}
           </a>
         </div>
 

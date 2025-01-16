@@ -1,18 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { ABOUT_CONTENT } from "../constants";
-import { useState, useEffect } from "react";
-
-const useDeviceType = () => {
-  const [device, setDevice] = useState("desktop");
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    setDevice(width < 768 ? "mobile" : "desktop");
-  }, []);
-
-  return device;
-};
 
 function About() {
   const textVariants = {
@@ -27,7 +15,6 @@ function About() {
     },
   };
 
-  const device = useDeviceType();
 
   return (
     <section className="px-6 py-10" id="about">

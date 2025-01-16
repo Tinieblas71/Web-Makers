@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { PROJECTS } from "../constants";
-import { useState, useEffect } from "react";
 
 const projectVariants = {
   hidden: { 
@@ -20,19 +19,7 @@ const projectVariants = {
   },
 };
 
-const useDeviceType = () => {
-  const [device, setDevice] = useState("desktop");
-
-  useEffect(() => {
-    const width = window.innerWidth;
-    setDevice(width < 768 ? "mobile" : "desktop");
-  }, []);
-
-  return device;
-};
-
 function Projects() {
-  const device = useDeviceType();
 
   return (
     <section className="px-6 py-10" id="work">
