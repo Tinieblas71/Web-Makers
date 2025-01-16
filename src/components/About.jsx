@@ -36,19 +36,6 @@ function About() {
       </h1>
       <div className="h-1 w-20 mb-8 bg-white "></div>
       <div className="max-w-4xl mx-auto backdrop-blur-3xl p-8 bg-stone-600/10 rounded-lg">
-        {device === "mobile" ? (
-          <>
-            {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-xl md:text-2xl lg:text-4xl mb-10 leading-relaxed"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </>
-        ) : (
-          <>
             {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
               <motion.p
                 key={index}
@@ -61,8 +48,6 @@ function About() {
                 {paragraph}
               </motion.p>
             ))}
-          </>
-        )}
       </div>
     </section>
   );

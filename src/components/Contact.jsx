@@ -54,17 +54,6 @@ function Contact() {
         Contacto{" "}
       </h2>
       <div className="h-1 w-20 bg-white mb-8"> </div>
-      {device === "mobile" ? (
-        <h3
-          className="text-6xl md:text-8xl leading-none"
-          initial="hidden"
-          whileInView="visible"
-          custom={0.4}
-          variants={textVariants}
-        >
-          {CONTACT_CONTENT.headline}
-        </h3>
-      ) : (
         <motion.h3
           className="text-6xl md:text-8xl leading-none"
           initial="hidden"
@@ -74,7 +63,6 @@ function Contact() {
         >
           {CONTACT_CONTENT.headline}
         </motion.h3>
-      )}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         {device === "mobile" ? (
           <>

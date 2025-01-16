@@ -38,37 +38,6 @@ function Testimonials() {
       <div className="h-1 w-20 bg-white mb-8"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-        {device === "mobile" ? (
-          <>
-            {TESTIMONIALS.map((testimonial, index) => (
-              <div
-                key={index}
-                className="relative rounded-lg p-6 h-full backdrop-blur-3xl bg-stone-500/10"
-                custom={index}
-                initial="hidden"
-                whileInView="visible"
-                variants={childVariants}
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt="testimonials imgs"
-                    className="w-12 rounded-full mr-4"
-                    loading="lazy"
-                  />
-                  <div>
-                    <h2 className="text-lg font-semibold">
-                      {testimonial.name}
-                    </h2>
-                    <p className="text-sm font-light">{testimonial.title}</p>
-                  </div>
-                </div>
-                <p className="leading-relaxed">{testimonial.feedback}</p>
-              </div>
-            ))}
-          </>
-        ) : (
-          <>
             {TESTIMONIALS.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -96,8 +65,6 @@ function Testimonials() {
                 <p className="leading-relaxed">{testimonial.feedback}</p>
               </motion.div>
             ))}
-          </>
-        )}
       </div>
     </section>
   );
