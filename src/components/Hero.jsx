@@ -3,6 +3,7 @@ import logo from "../assets/web-maker-logo.png";
 import { useState, useEffect } from "react";
 import React from "react";
 import { HERO_CONTENT } from "../constants";
+import boxicons from "boxicons";
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -50,24 +51,34 @@ function Hero() {
         {device === "mobile" ? (
           <>
             <div className="w-full md:w-1/2 p-8">
-              <h1 className="text-2xl md:text-3xl lg:text-5xl my-14">
+              <h1 className="text-2xl md:text-3xl lg:text-6xl my-14">
                 <b>{HERO_CONTENT.greeting}</b>
               </h1>
-              <p className="text-xl md:text-2xl lg:text-4xl mb-4">
-                {HERO_CONTENT.introduction}
+              <p className="text-xl md:text-2xl lg:text-4xl mb-4 backdrop-blur-3xl p-8 bg-stone-600/10 rounded-lg">
+                <i>{HERO_CONTENT.introduction}</i>
               </p>
-              <p className="text-xl md:text-2xl lg:text-4xl mb-4">
+              <p className="text-xl md:text-2xl lg:text-4xl mb-4 backdrop-blur-3xl p-8 bg-stone-600/10 rounded-lg">
                 {HERO_CONTENT.description}
               </p>
             </div>
-            <div className="w-full md:w-1/2 p-8">
-              <img
-                src={logo}
-                alt="img jason"
-                width={300}
-                height={300}
-                className="rounded-3xl"
-              />
+            <div className="w-full">
+              <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+                <a href="#work">
+                  <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                    <motion.div
+                      animate={{
+                        y: [0, 24, 0],
+                      }}
+                      transition={{
+                        duration: 1.25,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }}
+                      className="w-3 h-3 rounded-full bg-secondary mb-1 bg-white"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
           </>
         ) : (
@@ -77,7 +88,7 @@ function Hero() {
               initial="hidden"
               animate="visible"
               variants={containerVariants}
-              style={{ willChange: 'transform' }}
+              style={{ willChange: "transform" }}
             >
               <motion.h1
                 className="text-2xl md:text-3xl lg:text-5xl my-14"
@@ -104,7 +115,7 @@ function Hero() {
               initial="hidden"
               animate="visible"
               variants={imageVariants}
-              style={{ willChange: 'transform' }}
+              style={{ willChange: "transform" }}
             >
               <img
                 src={logo}
@@ -114,6 +125,25 @@ function Hero() {
                 className="rounded-3xl"
               />
             </motion.div>
+            <div className="w-full">
+              <div className="absolute xs:bottom-10 bottom-24 w-full flex justify-center items-center">
+                <a href="#work">
+                  <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                    <motion.div
+                      animate={{
+                        y: [0, 24, 0],
+                      }}
+                      transition={{
+                        duration: 1.25,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }}
+                      className="w-3 h-3 rounded-full bg-secondary mb-1 bg-white"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
           </>
         )}
       </div>

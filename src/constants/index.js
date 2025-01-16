@@ -44,7 +44,6 @@ export const ABOUT_CONTENT = {
     "Diseño sitios web modernos, funcionales y hechos a la medida, combinando diseño atractivo, tecnología eficiente y una experiencia de usuario excepcional.",
     "Con experiencia en desarrollo web, aplicaciones y diseño, transformo tus ideas en soluciones digitales.",
     "Además, ofrezco servicios como campañas publicitarias, gestión de redes sociales, creación de contenido y estrategias de marketing.",
-    "Todo enfocado en ayudar a tu negocio a crecer y destacar en el mundo digital. Desde páginas para negocios hasta plataformas personalizadas, estoy aquí para hacerlo realidad.",
   ],
 };
 
