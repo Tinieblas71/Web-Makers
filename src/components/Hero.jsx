@@ -64,7 +64,7 @@ function Hero() {
             </div>
             <div className="w-full mb-12">
               <div className="bottom-32 w-full flex justify-center items-center">
-                <a href="#work">
+                <a href="#about">
                   <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
                     <motion.div
                       animate={{
@@ -97,12 +97,11 @@ function Hero() {
               >
                 <b>{HERO_CONTENT.greeting}</b>
               </motion.h1>
-              <motion.p
-                className="text-xl md:text-2xl lg:text-4xl mb-4"
-                variants={textVariants}
-              >
-                {HERO_CONTENT.introduction}
-              </motion.p>
+                <motion.p className="text-6xl md:text-2xl lg:text-4xl mb-4 text-white font-semibold 
+                bg-gradient-to-r from-white via-slate-500 to-slate-600 text-transparent bg-clip-text"
+                variants={textVariants}>
+                  Tu <span className="text-7xl md:text-2xl lg:text-4xl bg-gradient-to-b from-white via-cyan-400 to-blue-400 text-transparent bg-clip-text font-semibold">negocio</span> al <span className="text-7xl md:text-2xl lg:text-4xl bg-gradient-to-b from-white via-pink-400 to-rose-400 text-transparent bg-clip-text font-semibold">siguiente</span> nivel.
+                </motion.p>
               <motion.p
                 className="text-xl md:text-2xl lg:text-4xl mb-4"
                 variants={textVariants}
