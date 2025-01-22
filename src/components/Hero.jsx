@@ -85,7 +85,7 @@ function Hero() {
         ) : (
           <>
             <motion.div
-              className="w-full md:w-1/2 p-8"
+              className="w-full md:w-1/2 p-8 mt-32"
               initial="hidden"
               animate="visible"
               variants={containerVariants}
@@ -111,7 +111,7 @@ function Hero() {
             </motion.div>
 
             <motion.div
-              className="w-full md:w-1/2 p-8"
+              className="w-full md:w-1/2 p-8 mt-32"
               initial="hidden"
               animate="visible"
               variants={imageVariants}
@@ -125,9 +125,9 @@ function Hero() {
                 className="rounded-3xl"
               />
             </motion.div>
-            <div className="w-full">
-              <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center">
-                <a href="#work">
+            <div className="w-full mb-12">
+              <div className="w-full flex justify-center items-center">
+                <a href="#about">
                   <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
                     <motion.div
                       animate={{
@@ -138,7 +138,7 @@ function Hero() {
                         repeat: Infinity,
                         repeatType: "loop",
                       }}
-                      className="w-3 h-3 rounded-full bg-secondary mb-1 bg-white"
+                      className="w-3 h-3 rounded-full bg-secondary bg-white"
                     />
                   </div>
                 </a>
