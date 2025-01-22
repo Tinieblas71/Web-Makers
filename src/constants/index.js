@@ -13,9 +13,9 @@ export const LINKS = [
 export const HERO_CONTENT = {
   greeting: "¡Bienvenidos!",
   introduction:
-    "Web Makers, nació con un propósito claro.",
+    "Tu negocio al siguiente nivel.",
   description:
-    "Ayudar a negocios locales a crecer y adaptarse al mundo moderno mediante soluciones digitales accesibles y efectivas.",
+    "Ayudo a negocios locales a crecer y adaptarse al mundo moderno mediante soluciones digitales accesibles y efectivas.",
 };
 
 export const PROJECTS = [
